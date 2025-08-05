@@ -21,10 +21,16 @@
 
         <tbody>
             @for (elemento of lista; track elemento.id) {
-                <tr>
-                    <td>{{ elemento.id }}</td>
-                    <td><input type="checkbox" /></td>
-                    <td>{{ elemento.nome }}</td>
+                <tr class="corpo">
+                    <td>{{  elemento.id }}</td>
+                    <td>
+                        <input type="checkbox" 
+                                (click)="riscarItem(elemento)" 
+                                [checked]="elemento.comprado"/>
+                    </td>
+                    <td>
+                        <span [ngClass]="{ 'item-riscado' : elemento.comprado }">{{ elemento.nome }}</span>
+                    </td>
                 </tr>   
             }
             @empty {
@@ -32,4 +38,9 @@
             }
         </tbody>
     </table>
+
+    <div class="limpar-lista">
+        <button type="button"  (click)="limparLista()">Limpar Lista</button>  
+    </div>
+
 </div>

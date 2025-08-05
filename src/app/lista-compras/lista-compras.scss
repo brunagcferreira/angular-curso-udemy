@@ -11,7 +11,6 @@
     padding: 48px 50px;
     text-align: center;
     width: 100%;
-    max-width: 800px;
 }
 
 h1{
@@ -44,7 +43,7 @@ input:focus{
 ;
 }
 
-button{
+button[type="submit"]{
     padding: 11.5px 20px;
     border: none;
     border-radius: 4px;
@@ -54,15 +53,15 @@ button{
     cursor: pointer;
 }
 
-button:hover{
-    background-color: #6565a3;
+button[type="submit"]:hover{
+    background-color: #3b3b91;
 }
 
 table{
     font-family: Arial, Helvetica, sans-serif;
     width: 100%;
     border-collapse: collapse;
-    margin-top: 40px;
+    margin-top: 30px;
 }
 
 thead{
@@ -76,7 +75,38 @@ th, td{
     border: 1px solid #a3a3a3;
 }
 
+.corpo:nth-child(odd){
+    background-color: white;
+}
+
+.corpo:nth-child(even){
+    background-color: #e5e5fa;
+}
+
 input[type="checkbox"]{
     transform: scale(1.2);
     cursor: pointer;
+}
+
+.item-riscado{
+    text-decoration: line-through;
+}
+
+.limpar-lista {
+    text-align: right;
+    margin-top: 30px; /* espaço entre a tabela e o botão */
+}
+
+button[type="button"]{
+    padding: 8px 20px;
+    border: none;
+    border-radius: 4px;
+    background: #f74d5b;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button[type="button"]:hover{
+    background-color: #f00c1f;
 }
